@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useRef } from "react";
-import "../styles/Header.css";
 import Link from "next/link";
+import React, { useRef } from "react";
+import "../styles/Header.css";
 
 const Navbar: React.FC = () => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
 
   // Toggle menu function
   const toggleMenu = () => {
-
     if (mobileMenuRef.current && toggleButtonRef.current) {
       mobileMenuRef.current.classList.toggle("show");
       toggleButtonRef.current.classList.toggle("active");
