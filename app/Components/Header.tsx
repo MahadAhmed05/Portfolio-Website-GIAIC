@@ -4,13 +4,11 @@ import "../styles/Header.css";
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  const [menuActive, setMenuActive] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLDivElement>(null);
 
   // Toggle menu function
   const toggleMenu = () => {
-    setMenuActive((prevState) => !prevState);
 
     if (mobileMenuRef.current && toggleButtonRef.current) {
       mobileMenuRef.current.classList.toggle("show");
